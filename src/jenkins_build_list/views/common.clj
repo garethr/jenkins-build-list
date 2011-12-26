@@ -1,6 +1,6 @@
 (ns jenkins-build-list.views.common
   (:use [noir.core :only [defpartial]]
-        [hiccup.page-helpers :only [include-css html5]]))
+        [hiccup.page-helpers :only [include-css include-js html5]]))
 
 (defn load-props [file-name]
   (with-open [^java.io.Reader reader (clojure.java.io/reader file-name)]
@@ -13,7 +13,8 @@
     [:head
       [:title "Jenkins Builds"]
         (include-css "/css/reset.css")
-        (include-css "/css/core.css")]
+        (include-css "/css/core.css")
+        (include-js "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")]
     [:body
-      [:div#wrapper
-        content]]))
+      [:div#wrapper content]
+      [:script "var refreshId = setInterval(function(){$('#wrapper').fadeOut('slow').load('/ #wrapper').fadeIn('slow');}, 60000);"]]))

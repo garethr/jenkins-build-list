@@ -1,0 +1,117 @@
+body {
+  font-size: 2em;
+  background: #121212;
+  font-family: helvetica;
+  color: #999;
+}
+
+h1 {
+  display: none;
+}
+
+ol {
+  margin-top: 20px;
+}
+
+li {
+  display: block;
+  width: 50%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+li h2 {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 5px solid #333;
+  border-radius: 20px;
+  color: #777;
+  background: #222;
+}
+
+li div {
+  display: inline;
+  padding-left: 20px;
+}
+
+
+li div span {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 5px solid #FFF;
+  border-radius: 20px;
+  margin-right: 20px;
+  color: #FFF;
+}
+
+
+/* These styles are pretty specific to my usage */
+
+.target_application {
+
+}
+
+.tag {
+  background: #A64E00;
+}
+
+.master {
+  background: #BF7330;
+}
+
+.release {
+  background: #FFAD00;
+}
+
+.frontend {
+  background: #0493B4;
+}
+
+.calendars {
+  background: #BCC62B;
+}
+
+.planner {
+  background: #21788D;
+}
+
+.smartanswers {
+  background: #01667D;
+}
+
+.publisher {
+  background: #2C3998;
+}
+
+.jobs {
+  background: #071687;
+}
+
+.fco {
+  background: #1227C2;
+}
+
+.rummager {
+  background: #25A925;
+}
+
+.panopticon {
+  background: #58A500;
+}
+
+.needotron {
+  background: #00D800;
+}
+
+.signonotron {
+  background: #8593FC;
+}
+
+.static {
+  background: #219765;
+}
+
+.recommended-links {
+  background: #00C16E;
+}
+

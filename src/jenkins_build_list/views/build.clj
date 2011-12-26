@@ -18,19 +18,19 @@
     [(:username props) (:password props)]))
 
 (defpartial parameter [{:keys [name value]}]
-    [:p {:class (clojure.string/lower-case name)} value])
+    [:span {:class (str (clojure.string/lower-case name) " " value)} value])
 
 (defpartial build [{:keys [timestamp actions]}]
     (let [params (:parameters (first actions))]
-      (let [pretty (java.text.SimpleDateFormat. "EEEE, MMMM dd, kk:mm")]
+      (let [pretty (java.text.SimpleDateFormat. "kk:mm, EEEE, dd MMM")]
         [:li
-          [:h2 (.format pretty (new Date timestamp))]
-          [:div (map parameter params)]])))
+          [:div (map parameter params)]
+          [:h2 (.format pretty (new Date timestamp))]])))
 
 (defpage "/" []
     (let [api-response (client/get (str search-url) {:basic-auth auth-details})]
       (let [json-response (decode(:body api-response) true)]
         (common/layout
           [:h1 "Jenkins Builds"]
-          [:ul
+          [:ol
             (map build (:builds json-response))]))))
