@@ -3,7 +3,7 @@
 A very simple Clojure/Noir application which hits the Jenkins API and
 lists recent builds for a particular job.
 
-This is very much a learning excercise in writing some Clojure. Any
+This is very much a learning exercise in writing some Clojure. Any
 hints and tips much appreciated.
 
 ## Configuration
